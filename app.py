@@ -31,3 +31,12 @@ days_diff = (pd.to_datetime(select_date) - stock_data['Date'].min()).days
 
 y_pred = model.predict([[days_diff]])
 st.write(f'Predicted Close Price on {select_date} is: ₹{y_pred[0]}')
+
+hide_menu = """
+<style>
+#MainMenu {visibility: hidden;}
+footer {visibility: hidden;}
+header {visibility: hidden;}
+</style>
+"""
+st.markdown(hide_menu, unsafe_allow_html=True)
